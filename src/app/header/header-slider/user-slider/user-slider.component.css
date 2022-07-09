@@ -1,0 +1,43 @@
+.user-container {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-options {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-options ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-options li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.user-options li a {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+
+.user-options li a:hover {
+    opacity: .8;
+    color: #f44336;
+    transition: 0.5s;
+}

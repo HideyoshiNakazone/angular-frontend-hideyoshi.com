@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="main" #header>
+        <div class="logo">
+            <a routerLink="">
+                <img src="assets/img/logohideyoshi-white.png" alt="">
+            </a>
+        </div>
+        <div class="nav-links">
+            <ul class="link-container">
+                <li><a routerLink="/home">Home</a></li>
+                <li><a routerLink="/home">Work</a></li>
+                <li><a routerLink="/home">Contact</a></li>
+                <li><a routerLink="/home">About</a></li>
+            </ul>
+        </div>
+
+        <div class="profile">
+            <div class="profile-btn" (click)="toogleProfileDropdown()" #profileBtn>
+                <i class="fas fa-user"></i>
+            </div>
+            <app-header-dropdown class="dropdown" (clickOutside)="closeDropdown()" [ignoreClickOutside]="[profileBtn]"
+                [state]="profileDropdownState">
+            </app-header-dropdown>
+        </div>
+        <div class="burger-container" (click)="toogleNavSlider()">
+            <div class="burger-menu" [ngClass]="{'open'  : navSliderStatus}">
+            </div>
+        </div>
+    </div>
+    <div #nav>
+        <app-header-slider
+        [(state)]="navSliderStatus"
+        [clickOutsideStopWatching]="userSliderStatus"
+        [ignoreClickOutside]="[header, user]">
+            <app-nav-slider
+                [state]="navSliderStatus"
+                (profileButtonClicked)="profileButtonClicked()">
+            </app-nav-slider>
+        </app-header-slider>
+    </div>
+    
+    <div #user>
+        <app-header-slider
+        [(state)]="userSliderStatus"
+        [ignoreClickOutside]="[header, nav]">
+            <app-user-slider 
+                [state]="userSliderStatus">
+            </app-user-slider>
+        </app-header-slider>
+    </div>
+</div>

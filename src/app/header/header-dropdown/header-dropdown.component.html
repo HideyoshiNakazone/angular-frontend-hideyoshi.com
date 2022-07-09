@@ -1,0 +1,48 @@
+<div class="dropdown" appClickedOutside (clickOutside)="onClickedOutside()" [includeClickedOutside]="[management]"
+    [ignoreElementList]="ignoreClickOutside" [@dropdownState]="dropDownState">
+    <div class="info">
+        <h3>{{ this.user ? this.user.userName : 'User Account' }}</h3>
+    </div>
+    <div #management>
+        <ul class="user-management" *ngIf="!this.user">
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-user"></i>
+                </div>
+                <a routerLink="/home">Login</a>
+            </li>
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <a routerLink="/home">Sign up</a>
+            </li>
+        </ul>
+        <ul class="user-management" *ngIf="this.user">
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-user"></i>
+                </div>
+                <a routerLink="/home">My Profile</a>
+            </li>
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <a routerLink="/home">Edit Profile</a>
+            </li>
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <a routerLink="/home">Help</a>
+            </li>
+            <li class="dropdown-item">
+                <div class="icon-box">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+                <a routerLink="/home">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
