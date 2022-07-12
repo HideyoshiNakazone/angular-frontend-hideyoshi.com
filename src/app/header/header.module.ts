@@ -9,6 +9,7 @@ import { UserSliderComponent } from './header-slider/user-slider/user-slider.com
 import { HeaderDropdownComponent } from './header-dropdown/header-dropdown.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppRouterModule } from '../app-router.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -24,6 +25,7 @@ import { AppRouterModule } from '../app-router.module';
         CommonModule,
         BrowserAnimationsModule,
         AppRouterModule,
+        FontAwesomeModule,
         SharedModule
     ], exports: [
         HeaderComponent,

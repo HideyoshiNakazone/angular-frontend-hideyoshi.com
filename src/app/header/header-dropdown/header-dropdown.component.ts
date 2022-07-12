@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { faEdit, faQuestionCircle, faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import { User } from 'src/app/shared/models/user.model';
 
 @Component({
@@ -20,6 +21,14 @@ import { User } from 'src/app/shared/models/user.model';
     ]
 })
 export class HeaderDropdownComponent {
+    
+    userIcon = faUser;
+
+    editIcon = faEdit;
+
+    questionCircleIcon = faQuestionCircle;
+
+    signOutAltIcon = faSignOutAlt;
 
     @Input()
     state: boolean = false;

@@ -46,12 +46,12 @@
     margin: 0;
 }
 
-.dropdown-item .icon-box i {
+.dropdown-item .icon-box fa-icon {
     color: #919294;
     font-size: 20px;
 }
 
-.dropdown-item:hover .icon-box i {
+.dropdown-item:hover .icon-box fa-icon {
     opacity: 1;
     color: #f44336;
     transition: .5s;

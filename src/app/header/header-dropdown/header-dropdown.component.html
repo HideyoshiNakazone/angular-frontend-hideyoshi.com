@@ -7,13 +7,13 @@
         <ul class="user-management" *ngIf="!this.user">
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-user"></i>
+                    <fa-icon class="fas fa-user" [icon]="userIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">Login</a>
             </li>
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-edit"></i>
+                    <fa-icon class="fas fa-edit" [icon]="editIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">Sign up</a>
             </li>
@@ -21,25 +21,25 @@
         <ul class="user-management" *ngIf="this.user">
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-user"></i>
+                    <fa-icon class="fas fa-user" [icon]="userIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">My Profile</a>
             </li>
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-edit"></i>
+                    <fa-icon class="fas fa-edit" [icon]="editIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">Edit Profile</a>
             </li>
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-question-circle"></i>
+                    <fa-icon class="fas fa-question-circle" [icon]="questionCircleIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">Help</a>
             </li>
             <li class="dropdown-item">
                 <div class="icon-box">
-                    <i class="fas fa-sign-out-alt"></i>
+                    <fa-icon class="fas fa-sign-out-alt" [icon]="signOutAltIcon"></fa-icon>
                 </div>
                 <a routerLink="/home">Logout</a>
             </li>

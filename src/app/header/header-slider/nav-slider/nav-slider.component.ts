@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { SliderItemComponent } from 'src/app/shared/slider-item/slider-item.component';
 
 @Component({
@@ -7,6 +8,8 @@ import { SliderItemComponent } from 'src/app/shared/slider-item/slider-item.comp
     styleUrls: ['./nav-slider.component.css']
 })
 export class NavSliderComponent extends SliderItemComponent {
+    
+    userIcon = faUser;
 
     navLink = [
         { page: "Home", link: "/home" },
@@ -16,7 +19,7 @@ export class NavSliderComponent extends SliderItemComponent {
     ]
 
     @Output()
-    profileButtonClicked = new EventEmitter();
+        profileButtonClicked = new EventEmitter();
 
     constructor() {
         super();

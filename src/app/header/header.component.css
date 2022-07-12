@@ -86,7 +86,7 @@ app-header-slider {
     opacity: 1;
 }
 
-/* ====================== MOBILE MEDIA FORMAT ======================== */
+/* ====================== COMPUTER MEDIA FORMAT ======================== */
 
 @media only screen and (min-width: 712px) {
 
@@ -106,18 +106,17 @@ app-header-slider {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
         color: #ffffff;
         text-decoration: none;
     }
     
     .link-container li a {
-        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
         text-decoration: none;
         letter-spacing: 3px;
-        font-size: 15px;
+        color: #ffffff;
         font-weight: 500;
+        font-size: 16px;
     }
 
     .profile {
@@ -143,7 +142,7 @@ app-header-slider {
         right: 106px;
     }
 
-    .profile .profile-btn i {
+    .profile .profile-btn fa-icon {
         font-size: 25px;
     }
 

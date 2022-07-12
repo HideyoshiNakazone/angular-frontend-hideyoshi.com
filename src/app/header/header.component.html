@@ -16,7 +16,7 @@
 
         <div class="profile">
             <div class="profile-btn" (click)="toogleProfileDropdown()" #profileBtn>
-                <i class="fas fa-user"></i>
+                <fa-icon class="fas fa-user" [icon]="userIcon"></fa-icon>
             </div>
             <app-header-dropdown class="dropdown" (clickOutside)="closeDropdown()" [ignoreClickOutside]="[profileBtn]"
                 [state]="profileDropdownState">

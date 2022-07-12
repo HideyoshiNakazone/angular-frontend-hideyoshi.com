@@ -15,42 +15,42 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
             })),
             transition(
                 'hide => show', [
-                group([
-                    query(
-                        "@*", 
-                        animateChild(),
-                        { optional: true }
-                    ),
-                    animate('600ms ease-in')
-                ])
-            ]),
+                    group([
+                        query(
+                            "@*", 
+                            animateChild(),
+                            { optional: true }
+                        ),
+                        animate('600ms ease-in')
+                    ])
+                ]),
             transition(
                 'show => hide', [
-                group([
-                    query(
-                        "@*", 
-                        animateChild(), 
-                        { optional: true }
-                    ),
-                    animate('500ms ease-out')
+                    group([
+                        query(
+                            "@*", 
+                            animateChild(), 
+                            { optional: true }
+                        ),
+                        animate('500ms ease-out')
+                    ])
                 ])
-            ])
         ])
     ]
 })
 export class HeaderSliderComponent {
 
     @Input()
-    ignoreClickOutside!: HTMLDivElement[];
+        ignoreClickOutside!: HTMLDivElement[];
 
     @Input()
-    clickOutsideStopWatching: boolean = false;
+        clickOutsideStopWatching: boolean = false;
 
     @Input()
-    state: boolean = false;
+        state: boolean = false;
 
     @Output()
-    stateChange = new EventEmitter<boolean>();
+        stateChange = new EventEmitter<boolean>();
 
     constructor() { }
 
